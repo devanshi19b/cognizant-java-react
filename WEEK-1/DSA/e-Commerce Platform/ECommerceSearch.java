@@ -1,54 +1,10 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-/**
- * Exercise 2: E-commerce Platform Search Function
- * 
- * ====================================================================
- * 1. UNDERSTANDING ASYMPTOTIC NOTATION (Big O):
- * ====================================================================
- * 
- * Big O Notation:
- * - Big O notation describes the upper bound of an algorithm's time complexity.
- * - It tells us how the runtime grows as the input size (n) increases.
- * - It helps compare algorithms and choose the most efficient one.
- * 
- * Common Big O complexities:
- *   O(1)       - Constant time (e.g., accessing an array element by index)
- *   O(log n)   - Logarithmic time (e.g., Binary Search)
- *   O(n)       - Linear time (e.g., Linear Search)
- *   O(n log n) - Linearithmic time (e.g., Merge Sort)
- *   O(n^2)     - Quadratic time (e.g., Bubble Sort)
- * 
- * Search Operation Scenarios:
- * -------------------------------------------------------------------
- * | Algorithm     | Best Case | Average Case | Worst Case |
- * |---------------|-----------|--------------|------------|
- * | Linear Search | O(1)      | O(n)         | O(n)       |
- * | Binary Search | O(1)      | O(log n)     | O(log n)   |
- * -------------------------------------------------------------------
- * 
- * Linear Search:
- *   - Best Case O(1): Element is found at the first position.
- *   - Average Case O(n): Element is somewhere in the middle.
- *   - Worst Case O(n): Element is at the last position or not present.
- * 
- * Binary Search:
- *   - Best Case O(1): Element is at the middle of the array.
- *   - Average Case O(log n): Element is found after several divisions.
- *   - Worst Case O(log n): Element is at the extreme end or not present.
- *   - Requirement: The array MUST be sorted.
- * 
- * ====================================================================
- * 2. IMPLEMENTATION: Linear Search and Binary Search
- * ====================================================================
- */
+
 public class ECommerceSearch {
 
-    // ==========================================
-    // LINEAR SEARCH - Searches by productName
-    // Time Complexity: O(n)
-    // ==========================================
+   
     public static Product linearSearch(Product[] products, String targetName) {
         for (int i = 0; i < products.length; i++) {
             if (products[i].getProductName().equalsIgnoreCase(targetName)) {
@@ -58,11 +14,7 @@ public class ECommerceSearch {
         return null; // Product not found
     }
 
-    // ==========================================
-    // BINARY SEARCH - Searches by productName
-    // Time Complexity: O(log n)
-    // Requires: Array must be sorted by productName
-    // ==========================================
+   
     public static Product binarySearch(Product[] products, String targetName) {
         int low = 0;
         int high = products.length - 1;
@@ -82,10 +34,7 @@ public class ECommerceSearch {
         return null; // Product not found
     }
 
-    // ==========================================
-    // MAIN METHOD - Test and Compare
-    // ==========================================
-    public static void main(String[] args) {
+      public static void main(String[] args) {
 
         // Create an array of products
         Product[] products = {

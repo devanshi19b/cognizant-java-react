@@ -1,8 +1,4 @@
-/**
- * Concrete Document Class - WordDocument
- * 
- * Implements the Document interface for Word documents.
- */
+
 public class WordDocument implements Document {
 
     @Override
