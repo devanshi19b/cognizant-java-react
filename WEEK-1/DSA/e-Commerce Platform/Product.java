@@ -1,9 +1,4 @@
-/**
- * Exercise 2: E-commerce Platform Search Function
- * 
- * Product class with attributes for searching:
- * productId, productName, and category.
- */
+
 public class Product {
     private int productId;
     private String productName;

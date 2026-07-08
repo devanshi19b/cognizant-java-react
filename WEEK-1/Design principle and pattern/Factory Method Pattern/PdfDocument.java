@@ -1,8 +1,4 @@
-/**
- * Concrete Document Class - PdfDocument
- * 
- * Implements the Document interface for PDF documents.
- */
+
 public class PdfDocument implements Document {
 
     @Override

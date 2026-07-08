@@ -1,8 +1,4 @@
-/**
- * Concrete Document Class - ExcelDocument
- * 
- * Implements the Document interface for Excel documents.
- */
+
 public class ExcelDocument implements Document {
 
     @Override
