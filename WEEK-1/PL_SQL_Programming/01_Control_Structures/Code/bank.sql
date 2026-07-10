@@ -1,6 +1,4 @@
---------------------------------------------------
--- 1. TABLES CREATION
---------------------------------------------------
+
 CREATE TABLE loan_accounts (
     customer_id NUMBER,
     customer_age NUMBER,
@@ -25,9 +23,7 @@ CREATE TABLE active_loans (
     outstanding_amount NUMBER
 );
 
---------------------------------------------------
--- 2. SAMPLE DATA INSERTION
---------------------------------------------------
+
 INSERT INTO loan_accounts VALUES (1, 65, 12.5);
 INSERT INTO loan_accounts VALUES (2, 45, 10.5);
 
@@ -40,9 +36,7 @@ INSERT INTO customer_profiles (customer_id, customer_name) VALUES (2, 'Amit Shar
 INSERT INTO active_loans VALUES (1, 'LN1001', SYSDATE + 15, 5000);
 INSERT INTO active_loans VALUES (2, 'LN1002', SYSDATE + 45, 2500);
 
---------------------------------------------------
--- 3. PROCEDURES DEFINITION
---------------------------------------------------
+
 CREATE OR REPLACE PROCEDURE GrantSeniorDiscount IS
 BEGIN
     FOR r_cust IN (
@@ -88,9 +82,7 @@ BEGIN
 END;
 /
 
---------------------------------------------------
--- 4. EXECUTION MATRIX
---------------------------------------------------
+
 BEGIN
     DBMS_OUTPUT.PUT_LINE('SCENARIO - 1: For applying discount to interest rate for the customers above age 60');
     GrantSeniorDiscount;
